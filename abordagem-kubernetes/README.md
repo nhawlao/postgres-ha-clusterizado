@@ -152,9 +152,6 @@ make kube-pg-clean
 ### 4.6 Exclusão do cluster
 O processo é automatizado e gerenciado através dos seguintes comandos mapeados no Makefile:
 ```bash
-# 1. Desinstalar a stack do PostgreSQL/Pgpool e remover os volumes persistentes
-make kube-pg-clean
-
-# 2. Destruir o cluster Kubernetes (Kind) local
-kind delete cluster --name pg-ha-cluster
+# 1. Desinstalar a stack do PostgreSQL/Pgpool e remover os volumes persistentes e estruir o cluster Kubernetes (Kind) local
+make delete-cluster
 ```
