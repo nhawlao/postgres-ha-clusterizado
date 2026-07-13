@@ -4,11 +4,11 @@ install-kind:
 
 arm-kind:
 	[ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.32.0/kind-linux-arm64
-	install-kind
+	make install-kind
 
 amd-kind:
 	[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.32.0/kind-linux-amd64
-	install-kind
+	make install-kind
 
 deps:
 	sudo apt-get update
@@ -56,4 +56,5 @@ wakeup:
 	kubectl scale statefulset  my-postgres-ha-postgresql-ha-postgresql --replicas=3 -n db-layer
 
 delete-cluster:
+	make kube-pg-clean
 	kind delete cluster --name pg-ha-cluster
