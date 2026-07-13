@@ -1,4 +1,4 @@
-Depois de preparar e instalar as ferramentas necessárias em cada uma das três VMs (Postgresql, etcd e patroni), seguimos esses passos para preparar o terreno:
+Depois de preparar e instalar as ferramentas necessárias em cada uma das três VMs (Postgresql, etcd e patroni), seguimos esses passos para construir a topologia:
 
 Fase 1 - Configuração do etcd
 
